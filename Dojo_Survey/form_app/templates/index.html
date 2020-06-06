@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="/Users/jayoung/Desktop/Dojo_Assignments/Python/Django/Intro/Dojo_Survey/form_app/static/css/style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <form action="/user" method="POST">
+            {% csrf_token %}
+            <div class="form-group row">
+                <label for="username" class="col-md-3 col-form-label">Your Name:</label>
+                <div class="col-md-9 namediv">
+                    <input type="text" class="form-control form-control-sm" id="username" name="username">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="locationdropdown" class="col-md-3 col-form-label">Dojo Location:</label>
+                <select class="col-md-9 form-control form-control-sm" id="locationdropdown" name="locationdropdown">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Orange County">Orange County</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Oakland">Oakland</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-md-3 pt-0">OS:</legend>
+                    <div class="col-md-9">
+                        <div class="form-check">
+                            <input class="form-check-input form-control-sm" type="radio" name="oschoice" id="osmac" value="Mac" checked>
+                            <label class="form-check-label form-control-sm" for="osmac">
+                            Mac
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input form-control-sm" type="radio" name="oschoice" id="oswin" value="Windows">
+                            <label class="form-check-label form-control-sm" for="oswin">
+                            Windows
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input form-control-sm" type="radio" name="oschoice" id="osother" value="Other">
+                            <label class="form-check-label form-control-sm" for="osother">
+                            Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-md-3">Favorite Languages:</div>
+                <div class="col-md-9">
+                    <div class="form-check">
+                        <input class="form-check-input form-control-sm" type="checkbox" id="langpython" value="Python" name="favlanguage">
+                        <label class="form-check-label form-control-sm" for="langpython">
+                        Python
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input form-control-sm" type="checkbox" id="langjs" value="Javascript" name="favlanguage">
+                        <label class="form-check-label form-control-sm" for="langjs">
+                        Javascript
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input form-control-sm" type="checkbox" id="langcsharp" value="C#" name="favlanguage">
+                        <label class="form-check-label form-control-sm" for="langcsharp">
+                        C#
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input form-control-sm" type="checkbox" id="langother" value="Other" name="favlanguage">
+                        <label class="form-check-label form-control-sm" for="langother">
+                        Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="optionalcomment">Comment (optional):</label>
+                <textarea class="form-control" id="optionalcomment" rows="3" name="optionalcomment"></textarea>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

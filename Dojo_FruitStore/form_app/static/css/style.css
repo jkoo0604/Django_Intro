@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    vertical-align: middle;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftpane,
+.rightpane {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 500px;
+}
+
+.leftpane {
+    width: 480px;
+}
+
+.rightpane {
+    width: 295px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(164, 180, 196);
+}
+
+th {
+    padding-left: 15px;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+
+}
+
+.lowertb tr td {
+    padding: 0px 0px 0px 4.8px;
+}
+
+.uppertb tr th {
+    padding-left: 19.8px;
+}
+
+.buttoncol,
+.buttoncol2 {
+    text-align: right;
+}
+
+.buttoncol2 {
+    justify-content: right;
+}
+
+.buttoncol {
+    display: inline-block;
+    padding-right: 0px;
+}
+
+.fruitdropdown {
+    text-align: center;
+}
+
+.underscore {
+    text-decoration: underline;
+}
+
+.storetitle {
+    font-weight: 800;
+}
+
+span {
+    text-decoration: line-through;
+}
+
+.buttoncol button {
+    background-color: rgb(103, 127, 151);
+    border-color: rgb(103, 127, 151);
+}
+
+.container2  {
+    width: 600px;
+    margin: auto;
+}
+
+.orderdetail {
+    margin-bottom: 20px;
+}
+
+.uppertb2 tbody td,
+.lowertb2 tbody td,
+.uppertb2 thead th {
+    padding-left: 19.8px;
+}
+
+
+.lowertb2 tr td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.outputcol {
+    width: 274px;
+}

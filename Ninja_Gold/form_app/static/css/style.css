@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(25, 51, 100);
+}
+
+a {
+    color: rgb(21, 45, 88);
+}
+
+.btn-dark {
+    background-color: rgb(41, 77, 145);
+}
+
+.btn-outline-dark {
+    color: rgb(41, 77, 145);
+}
+
+.btn-dark,
+.btn-outline-dark {
+    border: rgb(41, 77, 145) solid 1px;
+}
+
+.location,
+.activitylog {
+    border: rgb(10, 30, 66) solid 1px;
+}
+
+.container {
+    margin: auto;
+    width: 920px;
+    text-align: center;
+}
+
+.score {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.location {
+    width: 200px;
+    min-height: 200px;
+    padding-top: 20px;
+}
+
+.placename {
+    font-size: 25px;
+}
+
+.scorerange {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.activities {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.activitylog {
+    width: 890px;
+    height: 150px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.green {
+    color: rgb(15, 94, 15);
+}
+
+.red {
+    color: rgb(161, 19, 19);
+}
+
+.result {
+    padding-top: 15px;
+
+}
+
+.win {
+    color: rgb(209, 156, 41);
+}
+
+.lose {
+    color: rgb(124, 36, 136);
+}
+
+.resetbtn { 
+    text-align: right;
+    padding-top: 20px;
+}
+
+.settarget {
+    text-align: right;
+    margin-top: 20px;
+}   

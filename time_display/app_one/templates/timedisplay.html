@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Time</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <script src="{% static 'script.js' %}"></script> -->
+</head>
+<body>
+    <div class="container">
+        <p class="title">
+            The current time and date:
+        </p>
+        <!-- <p class="displaydate">
+            {{ date }}
+        </p>
+        <p class="displaytime">
+            {{ time }}
+        </p> -->
+        <p class="displaydatetime">
+            {{ datetime|linebreaksbr }}
+        </p>
+    </div>
+</body>
+</html>

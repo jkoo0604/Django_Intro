@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="/Users/jayoung/Desktop/Dojo_Assignments/Python/Django/Intro/Ninja_Gold/form_app/static/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="settarget">
+            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#inputtarget">Set Target</button>
+        </div>
+        <div class="row flex-nowrap d-flex justify-content-start align-items-center score">
+            <p class="title">Your Gold:</p>
+            <p class="scoredisplay">{{ totalscore }}</p>
+        </div>
+        <div class="row flex-nowrap d-flex justify-content-around align-items-center">
+            <div class="location">
+                <p class="placename">
+                    Farm
+                </p>
+                <p class="scorerange">
+                    (earns 10-20 golds)
+                </p>
+                <a class="btn btn-dark shadow" href="Farm" role="button">Farm</a>
+            </div>
+            <div class="location">
+                <p class="placename">
+                    Cave
+                </p>
+                <p class="scorerange">
+                    (earns 5-10 golds)
+                </p>
+                <a class="btn btn-dark shadow" href="Cave" role="button">Cave</a>
+            </div>
+            <div class="location">
+                <p class="placename">
+                    House
+                </p>
+                <p class="scorerange">
+                    (earns 2-5 golds)
+                </p>
+                <a class="btn btn-dark shadow" href="House" role="button">House</a>
+            </div>
+            <div class="location">
+                <p class="placename">
+                    Casino
+                </p>
+                <p class="scorerange">
+                    (earns/takes 0-50 golds)
+                </p>
+                <a class="btn btn-dark shadow" href="Casino" role="button">Casino</a>
+            </div>
+        </div>
+        <div class="activities">
+            <p class="title">Activities:</p>
+            <div class="activitylog overflow-auto">
+                <ul>
+                    {% for key in activitystr %}
+                    <li class="{% if 'Earned' in key %} green {% else %} red {% endif %}">{{ key }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="result">
+            <p class="{% if 'You win' in result %} win {% else %} lose {% endif %}">{{ result }}</p>
+        </div>
+        <div class="resetbtn">
+            <a class="btn btn-outline-dark btn-sm" href="reset" role="button">Reset</a>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="inputtarget" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/target" method='post'>
+                    {% csrf_token %}
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Input Target</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body col-md-6">
+                        <input class="form-control form-control-sm" type="text" placeholder="Target Moves" name="targetmoves">
+                        <input class="form-control form-control-sm" type="text" placeholder="Target Score" name="targetscore">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-dark btn-sm">Submit</button>
+                    </div>
+                </form>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

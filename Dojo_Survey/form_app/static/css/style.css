@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 700px;
+    height: 500px;
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+.namediv {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.form-check-input {
+    padding-top: 0px;
+    margin-top: 0px;
+    vertical-align: middle;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}

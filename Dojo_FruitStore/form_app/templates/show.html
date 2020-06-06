@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Fruit Store Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="/Users/jayoung/Desktop/Dojo_Assignments/Python/Django/Intro/Dojo_FruitStore/form_app/static/css/style.css"> -->
+</head>
+<body>
+    <div class="container2">
+        <p class="title">
+            Thank you for your order!
+        </p>
+        <p class="orderdetail">We ordered {{ itemcount }} items for you and charged your student account on {{ datetime }} .</p>
+        <h5 class="subtitle underscore">You've ordered:</h5>
+        <table class="table table-sm table-striped uppertb2">
+            <thead>
+                <tr>
+                <th scope="col">Fruit Name</th>
+                <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Strawberry</td>
+                    <td>{{ strawberry }}</td>
+                </tr>
+                <tr>
+                    <td>Raspberry</td>
+                    <td>{{ raspberry }}</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>{{ apple }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 class="subtitle underscore">Your Information</h5>
+        <table class="table table-borderless lowertb2">
+            <tbody>
+                <tr>
+                    <td>Your Name:</td>
+                    <td class="outputcol">{{ studentname }}</td>
+                </tr>
+                <tr>
+                    <td>Your Student ID:</td>
+                    <td class="outputcol">{{ studentid }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!-- {% for name in namelist %}
+        <p>Hello {{ name }}</p>
+    {% endfor %} -->

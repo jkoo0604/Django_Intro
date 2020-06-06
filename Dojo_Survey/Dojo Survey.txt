@@ -1,0 +1,80 @@
+<QueryDict: {
+'csrfmiddlewaretoken': ['S1ZBAfNPLZLFxrn6f3iV5nu2FEeqBxWWL7n7DQN6pN6Gec51TboOeIyrVfzH8ung'], 
+'username': ['Jane Doe'], 
+'locationdropdown': ['orangecounty'], 
+'oschoice': ['windows'], 
+'favlanguage': ['javascript', 'c#'], 
+'optionalcomment': ['Test paragraph']
+}>
+
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['9DvZLSqmQvn5EemBli4Ns0i0eSjhcJGE2JTvOtqDujI6lZ4wZqaGBlmputEyJG7Y'], 
+'username': ['John Doe'], 
+'locationdropdown': ['other'], 
+'oschoice': ['mac'], 
+'favlanguage': ['c#'], 
+'optionalcomment': ['']
+}>
+
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['37luNGH8lpTvnpoUB80VaHOVf1gCTBOkWdJ0QhHpZdew4a6Pfg6Oj2SkvCBTqyfE'], 
+'username': ['Joe Bruin'], 
+'locationdropdown': ['San Jose'], 
+'oschoice': ['Mac'], 
+'favlanguage': ['Python', 'Javascript', 'C#'], 
+'optionalcomment': ['Test paragraph']}>
+
+
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['jJlTqyEfqMnXvft7lHpe7dzRv7WZEy49cPJpt9Ew4AIYc0b2ZPv7gyDgLIhgbvvt'], 
+'username': ['Joe Bruin'], 
+'locationdropdown': ['Seattle'], 
+'oschoice': ['Windows'], 
+'favlanguage': ['Python', 'Javascript', 'C#'], 
+'optionalcomment': ['Test']}>
+
+{
+'username': 'Joe Bruin', 
+'location': 'Seattle', 
+'currentos': 'Windows', 
+'favlang': 'C#', 
+'opttext': 'Test'}
+
+
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['b4ZX2B2T7oTYpjqP8mDqK9Cs3Me8kxEA4ant5c2aLceZ648KMuJjTuGRjnzpRu5U'], 
+'username': ['Jane Doe'], 
+'locationdropdown': ['Orange County'], 
+'oschoice': ['Windows'], 
+'favlanguage': ['Python', 'Javascript', 'C#'], 
+'optionalcomment': ['Test']}>
+
+{
+'username': 'Jane Doe', 
+'location': 'Orange County', 
+'currentos': 'Windows', 
+'favlang': 'C#', 
+'opttext': 'Test'}
+
+
+
+
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['A8h8lYzIH5HBrAaPOqGcPgdF5GWVZtpfteFEozzZlT2C8lSKsyM5YBh4lhhcwqQz'], 
+'username': ['John Doe'], 
+'locationdropdown': ['Orange County'], 
+'oschoice': ['Mac'], 
+'favlanguage': ['Python', 'Javascript', 'C#'], 
+'optionalcomment': ['']}>
+
+{
+'username': 'John Doe', 
+'location': 'Orange County', 
+'currentos': 'Mac', 
+'favlang': ['Python', 'Javascript', 'C#'], 
+'opttext': ''}
